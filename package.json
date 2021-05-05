@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/spishniak/test-task/issues"
   },
-  "homepage": "https://github.com/spishniak/test-task#readme"
+  "homepage": "https://github.com/spishniak/test-task#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
