@@ -6,7 +6,8 @@
 <% 
 if(gifs.length !==0) { 
     gifs.forEach(gif=> { 
-    %> <object data="<%= gif %>"></object> <% }); 
+    %> <object data="<%= gif %>"></object> <%
+    }); 
 } else { 
 %> <p>Sorry, any gifs for this word... try another</p> <% 
 } 
