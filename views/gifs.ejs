@@ -3,6 +3,11 @@
 </form>
 <hr>
 
-<% if(gifs.length !==0) { gifs.forEach(gif=> { %>
-    <object data="<%= gif %>"></object>
-        <% }) } %>
+<% 
+if(gifs.length !==0) { 
+    gifs.forEach(gif=> { 
+    %> <object data="<%= gif %>"></object> <% }); 
+} else { 
+%> <p>Sorry, any gifs for this word... try another</p> <% 
+} 
+%>
