@@ -9,10 +9,10 @@ settingApplication(app)
 
 
 
-app.get('/search', (req, res) => {
+app.get('/search', async (req, res) => {
     const searchQuery = req.query.search
-    giphyService.search(searchQuery)
-    
+    const giphyResponse = await giphyService.search(searchQuery)
+    const gifs = giphyResponse.data.data.map(gif => gif.embed_url)
     res.render('welcome.ejs', {
         gifLink: "https://i.gifer.com/origin/ed/ed7843c794b34fe4fc95260a9231625a.gif",
     })
