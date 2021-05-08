@@ -1,7 +1,8 @@
 import giphyRepository from './giphy.repository.js'
 
-function search(searchQuery){
-    return giphyRepository.makeGiphyRequest(searchQuery)
+async function search(searchQuery){
+    const giphyResponse = await giphyRepository.makeGiphyRequest(searchQuery);
+    return giphyResponse.data.data.map(gif => gif.embed_url)
 }
 
 export default {
