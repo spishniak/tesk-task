@@ -1,6 +1,6 @@
 import express from 'express'
 import settingApplication from './config/middleware.js'
-import initRouters from './config/router'
+import initRouters from './config/router.js'
 
 
 const app = express()

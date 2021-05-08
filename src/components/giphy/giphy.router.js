@@ -1,5 +1,7 @@
-const giphyRouter = new require('express').Router()
-const giphyService = require('./giphy.service')
+import express from 'express';
+import giphyService from './giphy.service.js'
+
+const giphyRouter = new express.Router()
 
 giphyRouter.get('/search', async (req, res) => {
     const searchQuery = req.query.search
@@ -7,8 +9,8 @@ giphyRouter.get('/search', async (req, res) => {
     res.render('gifs.ejs', { gifs })
 })
 
-app.use('/', (req, res) => {
+giphyRouter.use('/', (req, res) => {
     res.render('welcome.ejs')
 })
 
-module.exports = giphyRouter;
+export default giphyRouter;

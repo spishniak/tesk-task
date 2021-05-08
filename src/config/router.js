@@ -1,8 +1,8 @@
-const giphyRouter = require("../components/giphy/giphy.router")
+import giphyRouter  from "../components/giphy/giphy.router.js"
 
 
 function initRouters(app) {
     app.use('/', giphyRouter)
 }
 
-module.exports = initRouters
+export default initRouters
